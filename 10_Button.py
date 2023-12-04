@@ -11,7 +11,7 @@
 
 import streamlit as st
 
-if st.button('Say Hello'):
-    st.write('Hey Hello There ! ')
+if st.button('Submit'):
+    st.write('button clicked! ')
 else:
-    st.write('Goodbye')
+    st.write('click button')

@@ -17,5 +17,8 @@ genre = st.radio(
 
 if genre == 'Comedy':
     st.write('You selected comedy.')
-else:
-    st.write('You did not selected comedy.')
+elif genre == 'Drama':
+    st.write('You selected drama')
+elif genre == 'Documentary':
+    st.write('You selected Documentary')
+

@@ -5,6 +5,6 @@
 from PIL import Image
 import streamlit as st
 
-image = Image.open('test.jpg')
+image = Image.open('data/flower.jpg')
 
 st.image(image,caption="Nice Picture")

@@ -1,38 +1,40 @@
+# Projects(4)
+#     1) Insurance Premium Predictor App  ####################
+#     2) Calories Burned Calculator App 
+#     4) Stock Market Index Prediction App
+# pip install scikit-learn
+
+
 import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
 nav = st.sidebar.radio("Navigation",["About","Predict"])
-df = pd.read_csv('insurance.csv')
+df = pd.read_csv('data/insurance.csv')
 
 if nav=="About":
     st.title("Health Insurance Premium Predictor")
     st.text(" ")
     st.text(" ")
-    st.image('health_insurance.jpeg',width=600)
+    st.image('data/health_insurance.jpeg',width=600)
     
 
 df.replace({'sex':{'male':0,'female':1}},inplace=True)
-
 df.replace({'smoker':{'yes':0,'no':1}},inplace=True)
-
 df.replace({'region':{'southeast':0,'southwest':1,'northeast':2,'northwest':3}},inplace=True)
 
 
 x = df.drop(columns='charges',axis=1)
-
 y = df['charges']
 
 rfr = RandomForestRegressor()
-
 rfr.fit(x,y)
 
 if nav=="Predict":
     st.title("Enter Details")
 
     age = st.number_input("Age: ",step=1,min_value=0)
-
     sex = st.radio("Sex",("Male","Female"))
 
     if (sex == "Male"):
@@ -40,9 +42,7 @@ if nav=="Predict":
     if (sex == "Female"):
         s=1
     bmi = st.number_input("BMI: ",min_value=0)
-
     children = st.number_input("Number of children: ",step=1,min_value=0)
-
     smoke = st.radio("Do you smoke",("Yes","No"))
 
     if (smoke=="Yes"):

@@ -11,18 +11,18 @@
 import streamlit as st
 import pandas as pd
 
-sample_text = "Some Text that will be downloaded."
+sample_text = "무궁화 꽃이 피었습니다."
 st.download_button('Download text',sample_text)
 
 with open("data/flower.jpg","rb") as file:
     btn = st.download_button(
-        label = "Download Image",
-        data = file,
-        file_name = "data/flower.jpg",
-        mime = "image/jpg"
-        )
+            label = "Download Image",
+            data = file,
+            file_name = "flower.jpg",
+            mime = "image/jpg"
+            )
 
-@st.cache
+# @st.cache
 
 def convert_df(df):
     return df.to_csv().encode('utf-8')

@@ -11,7 +11,7 @@
 import streamlit as st
 
 option = st.selectbox(
-    'How would you like to be contacted?',
-    ('Email','Home phone','mobile phone'))
+    '시도',
+    ('서울','대전','대구','부산','울산','광주','세종'))
 
-st.write('You selected:',option)
+st.write('선택시도:',option)
