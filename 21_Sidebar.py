@@ -1,3 +1,8 @@
+# Layouts and Containers in Streamlit(3)
+#     1) Sidebar #################
+#     2) Columns
+#     3) Expander
+
 import streamlit as st
 
 add_selectbox = st.sidebar.selectbox(
