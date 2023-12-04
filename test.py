@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-view = [100,150,80]
+view = [ i**2 for i in range(100)]
 view
 st.write('## test view')
 st.bar_chart(view)
