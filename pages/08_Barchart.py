@@ -10,3 +10,14 @@ data = np.random.randn(20,3,)
 chart_data = pd.DataFrame(data,columns = ['a','b','c'])
 st.bar_chart(chart_data)
 st.dataframe(data,800)
+
+
+
+# 그래프 그리기 
+#view = [ i**2 for i in range(1,5)]
+# st.write('## TOI300 Streamlit Web Edu-Test')
+# st.bar_chart(view)
+
+# sview = pd.Series(view)
+# sview
+# st.write(sview)

@@ -21,3 +21,15 @@ elif add_selectbox == 'Mobile Phone':
 #         ("Standard Shipping","Premium Shipping"))
 
     
+# sidebar에 selectbox 추가 
+
+add_selectbox = st.sidebar.selectbox(
+    'How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone')
+)
+
+# sidebar에 slider 추가 
+add_slider = st.sidebar.slider(
+    'Select a range of values',
+    0.0, 100.0, (25.0, 75.0)
+)

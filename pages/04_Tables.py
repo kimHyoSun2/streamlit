@@ -9,8 +9,20 @@ DataFrame에서는 데이터 정렬과 같은 옵션이 있고, 매개변수와 
 '''
 import streamlit as st
 import pandas as pd
+import numpy as np
+
+st.write('## 정적인 데이터 보이기 I')
 
 
 data1 = [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]]
 df = pd.DataFrame(data1, columns = ('col %d' % i for i in range(5)))
+st.table(df)
+
+
+
+st.write('## 정적인 데이터 보이기 II')
+
+df = pd.DataFrame(
+    np.random.randn(10, 20),
+    columns=('col %d' % i for i in range(20)))
 st.table(df)
